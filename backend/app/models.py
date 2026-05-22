@@ -27,7 +27,7 @@ class User(Base):
     dob                   = Column("dob",                   String(20),  nullable=True)
 
     # Role & industry — stored as plain VARCHAR in users_master
-    role                  = Column("role",                  String(10),  nullable=False, default="USER")
+    role                  = Column("role",                  String(20),  nullable=False, default="USER")
     user_type             = Column("user_type",             String(20),  nullable=True)
 
     # Activation flow

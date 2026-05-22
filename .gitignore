@@ -68,7 +68,7 @@ backend/prisma/seed.js
 backend/.env
 backend/.env.production
 .env.local
-.env.production
+!.env.production
 !backend/.env.example
 !.env.example
 

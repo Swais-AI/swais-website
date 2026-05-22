@@ -9,7 +9,7 @@ export default function CompanyPage() {
       <div className="space-y-16">
         <section className="glass-card w-full p-10 text-center max-w-4xl mx-auto border-t-2 border-t-cyan-500 rounded-xl">
           <p className="text-slate-300 text-xl leading-relaxed italic mb-10">
-            "Saraf Worldsphere AI Services (SWAIS) is focused on developing AI-driven technology platforms that support operational intelligence, enterprise software systems, and institutional capability development."
+            &quot;Saraf Worldsphere AI Services (SWAIS) is focused on developing AI-driven technology platforms that support operational intelligence, enterprise software systems, and institutional capability development.&quot;
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left bg-cyan-500/5 p-8 rounded-xl border border-cyan-500/10 relative overflow-hidden">

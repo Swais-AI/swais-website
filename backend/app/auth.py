@@ -66,3 +66,16 @@ def require_head(user: User) -> User:
             detail="Access denied. HEAD role required.",
         )
     return user
+
+
+SUPER_ADMIN_ROLES = ("SUPER_ADMIN", "HEAD")
+
+
+def require_super_admin(user: User) -> User:
+    """Raise 403 if user is not SUPER_ADMIN (HEAD also accepted for backwards compat)."""
+    if user.role not in SUPER_ADMIN_ROLES:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Access denied. Super Admin role required.",
+        )
+    return user

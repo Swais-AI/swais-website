@@ -82,7 +82,10 @@ async def google_callback(code: str, db: Session = Depends(get_db)):
     token = create_access_token({"id": user.id, "email": user.email})
 
     # Decide redirect based on user state
-    if not user.registration_complete:
+    # Super admins bypass registration/activation gating — they ARE the gatekeepers
+    if user.role in ("SUPER_ADMIN", "HEAD"):
+        redirect_to = f"{frontend}/admin"
+    elif not user.registration_complete:
         redirect_to = f"{frontend}/register"
     elif not user.is_active:
         redirect_to = f"{frontend}/pending"

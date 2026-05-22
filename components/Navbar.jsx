@@ -14,6 +14,7 @@ export default function Navbar() {
 
   // Determine if we're technically "logged in" based on Redux state
   const isLoggedIn = !!user;
+  const isSuperAdmin = isLoggedIn && (user?.role === 'SUPER_ADMIN' || user?.role === 'HEAD');
 
   const links = [
     { name: 'Home', path: '/' },
@@ -21,6 +22,7 @@ export default function Navbar() {
     { name: 'Solutions', path: '/solutions' },
     { name: 'Industries', path: '/industries' },
     { name: 'Academy', path: '/academy' },
+    { name: 'Saraswati' , path: '/saraswati'},
     { name: 'Collaborations', path: '/collaborations' },
     { name: 'Company', path: '/company' },
     { name: 'Insights', path: '/insights' },
@@ -69,7 +71,19 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="hidden xl:flex gap-4 items-center">
+          <div className="hidden xl:flex gap-3 items-center">
+            {isSuperAdmin && (
+              <Link
+                href="/admin"
+                title="Super Admin: User Activation"
+                className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/15 to-amber-300/15 border border-amber-400/40 text-amber-300 hover:text-amber-100 hover:from-amber-500/25 hover:to-amber-300/25 transition-all text-xs font-semibold tracking-wide"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Admin
+              </Link>
+            )}
             {isLoggedIn ? (
               <Link href="/dashboard" className="px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-400 hover:to-purple-400 transition-all text-sm font-semibold tracking-wide shadow-lg shadow-cyan-500/20">
                 Go to Dashboard
@@ -126,6 +140,18 @@ export default function Navbar() {
                 </Link>
               )
             ))}
+            {isSuperAdmin && (
+              <Link
+                href="/admin"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold border border-amber-400/40 text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Admin · User Activation
+              </Link>
+            )}
             <div className="pt-3 mt-3 border-t border-white/5">
               {isLoggedIn ? (
                 <Link
