@@ -19,29 +19,29 @@ jobs:
           script: |
             set -e
 
+            echo ">>> Pulling latest code..."
+            cd /home/ubuntu/swais-website
+            git pull origin main
+
+            echo ">>> Backend setup..."
+            cd /home/ubuntu/swais-website/backend
+            source venv/bin/activate
+            pip install -r requirements.txt
+            deactivate
+
+            echo ">>> Frontend setup..."
+            cd /home/ubuntu/swais-website
+
             export NVM_DIR="$HOME/.nvm"
             source $NVM_DIR/nvm.sh
             nvm use 20
 
-            echo ">>> Cloning or pulling latest code..."
-            if [ -d "/home/ubuntu/test-box" ]; then
-              cd /home/ubuntu/test-box
-              git pull origin main
-            else
-              git clone https://Swais-AI:${{ secrets.GH_TOKEN }}@github.com/Swais-AI/test_box.git /home/ubuntu/test-box
-              cd /home/ubuntu/test-box
-            fi
-
-            echo ">>> Installing dependencies..."
             npm install
-
-            echo ">>> Building app..."
             npm run build
 
-            echo ">>> Starting app on port 4001..."
-            pm2 stop test-box 2>/dev/null || true
-            pm2 delete test-box 2>/dev/null || true
-            PORT=4001 pm2 start npm --name "test-box" -- start
+            echo ">>> Restarting apps..."
+            pm2 restart swais-backend
+            pm2 restart swais-frontend
             pm2 save
 
             echo "Deploy complete!"
