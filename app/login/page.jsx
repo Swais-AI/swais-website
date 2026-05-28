@@ -57,7 +57,7 @@ export default function LoginPage() {
               
               <p className="text-sm text-gray-300 border-t border-[#2a4575]/50 pt-6 mt-4">
                 Need Help?<br/><br/>
-                Contact us: <a href="mailto:murty.varanasi@swais.in" className="hover:text-white cursor-pointer transition-colors font-medium">murty.varanasi@swais.in</a>
+                Contact us: <a href="mailto:prompt@swais.in" className="hover:text-white cursor-pointer transition-colors font-medium">prompt@swais.in</a>
               </p>
 
               <Link
