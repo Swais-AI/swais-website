@@ -139,7 +139,7 @@ export default function PendingPage() {
             </div>
 
             <p className="text-xs text-gray-400 text-center">
-              Need help? Contact <a href="mailto:murty.varanasi@swais.in" className="text-[#0f2851] font-medium hover:underline">murty.varanasi@swais.in</a>
+              Need help? Contact <a href="mailto:prompt@swais.in" className="text-[#0f2851] font-medium hover:underline">prompt@swais.in</a>
             </p>
           </div>
         </div>
