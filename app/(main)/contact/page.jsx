@@ -70,8 +70,8 @@ export default function ContactPage() {
             </div>
             <div className="text-center md:text-left">
               <h3 className="text-xl font-semibold text-white mb-1">Email</h3>
-              <a href="mailto:murty.varanasi@swais.in" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium">
-                murty.varanasi@swais.in
+              <a href="mailto:prompt@swais.in" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium">
+                prompt@swais.in
               </a>
             </div>
           </div>
