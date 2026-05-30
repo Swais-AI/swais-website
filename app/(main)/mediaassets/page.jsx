@@ -436,6 +436,7 @@ function MediaAssetsContent() {
                 />
               ))}
             </div>
+            
 
             {selectedImage && (
               <div
@@ -478,6 +479,12 @@ function MediaAssetsContent() {
                 </div>
               </div>
             )}
+            <h1 className="mt-6 text-left text-xl">
+                For further media, click{" "}
+              <a href="https://ashishsaraf.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline" >
+                https://ashishsaraf.com/
+              </a>
+            </h1>
           </section>
         )}
       </main>
