@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+{/* import { useEffect } from "react"; */}
 
 export default function SaraswatiPage() {
-  useEffect(() => {
+  
+  {/*useEffect(() => {
     const cursor = document.getElementById("cursor");
     const ring = document.getElementById("cursor-ring");
 
@@ -41,13 +42,13 @@ export default function SaraswatiPage() {
     return () => {
       document.removeEventListener("mousemove", moveCursor);
     };
-  }, []);
+  }, []); */}
 
   return (
     <main className="bg-[#FAF6EE] text-[#1A1040] overflow-x-hidden relative">
 
       {/* CURSOR */}
-      <div
+      {/* <div
         id="cursor"
         className="fixed w-[10px] h-[10px] bg-[#E8642A] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
       />
@@ -55,7 +56,7 @@ export default function SaraswatiPage() {
       <div
         id="cursor-ring"
         className="fixed w-9 h-9 border border-[#E8642A] rounded-full pointer-events-none z-[9998] opacity-60 -translate-x-1/2 -translate-y-1/2"
-      />
+      /> */}
 
       {/* HERO */}
       <section className="min-h-screen grid lg:grid-cols-2 gap-16 items-center px-[5vw] pt-32 pb-20 relative overflow-hidden">
@@ -115,7 +116,7 @@ export default function SaraswatiPage() {
             <div className="grid grid-cols-3 gap-4 mb-6">
 
               <div className="bg-[#FAF6EE] p-4 text-center rounded">
-                <div className="font-serif text-3xl text-[#E8642A]">
+                <div className="font-serif text-2xl text-[#E8642A]">
                   94%
                 </div>
                 <div className="text-[0.65rem] text-[#8A7FAA] mt-1">
@@ -124,7 +125,7 @@ export default function SaraswatiPage() {
               </div>
 
               <div className="bg-[#FAF6EE] p-4 text-center rounded">
-                <div className="font-serif text-3xl text-[#E8642A]">
+                <div className="font-serif text-2xl text-[#E8642A]">
                   87
                 </div>
                 <div className="text-[0.65rem] text-[#8A7FAA] mt-1">
@@ -133,7 +134,7 @@ export default function SaraswatiPage() {
               </div>
 
               <div className="bg-[#FAF6EE] p-4 text-center rounded">
-                <div className="font-serif text-3xl text-[#E8642A]">
+                <div className="font-serif text-2xl text-[#E8642A]">
                   4.8★
                 </div>
                 <div className="text-[0.65rem] text-[#8A7FAA] mt-1">
@@ -614,9 +615,7 @@ export default function SaraswatiPage() {
 
       {/* ANIMATIONS */}
       <style jsx global>{`
-        body {
-          cursor: none;
-        }
+        
 
         .animate-spin-slow {
           animation: spin 30s linear infinite;
