@@ -61,21 +61,34 @@ export default function ContactPage() {
 
         {/* Right Column - Contact Details */}
         <div className="space-y-6">
-          {/* Email */}
-          <div className="glass-card rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-5 group">
-            <div className="p-3 bg-cyan-500/10 rounded-xl border border-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
-              <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-semibold text-white mb-1">Email</h3>
-              <a href="mailto:prompt@swais.in" className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium">
-                prompt@swais.in
-              </a>
-            </div>
-          </div>
+         {/* Email */}
+<div className="glass-card rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-5 group">
+  <div className="p-3 bg-cyan-500/10 rounded-xl border border-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
+    <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+  </div>
 
+  <div className="text-center md:text-left">
+    <h3 className="text-xl font-semibold text-white mb-3">Email</h3>
+
+    <div className="flex flex-col gap-2">
+      <a
+        href="mailto:prompt@swais.in"
+        className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium"
+      >
+        prompt@swais.in
+      </a>
+
+      <a
+        href="mailto:murty.varanasi@swais.in"
+        className="text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium"
+      >
+        murty.varanasi@swais.in
+      </a>
+    </div>
+  </div>
+</div>
           {/* Phone */}
           <div className="glass-card rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-5 group">
             <div className="p-3 bg-cyan-500/10 rounded-xl border border-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
