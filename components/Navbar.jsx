@@ -28,6 +28,7 @@ export default function Navbar() {
     { name: 'Media Assets', path: '/mediaassets' },
     { name: 'Company', path: '/company' },
     { name: 'Insights', path: '/insights' },
+    { name: 'Employee Timesheets', path: '/employee-timesheet' },
     { name: 'Contact', path: '/contact' },
   ];
 
