@@ -10,15 +10,6 @@ export default function CollaborationsPage() {
       status: 'active',
     },
     {
-      name: 'Vinturas',
-      country: 'Netherlands',
-      flag: '🇳🇱',
-      domain: 'Supply Chain Visibility & Secure Data Exchange',
-      desc: 'Collaboration focused on secure, blockchain-backed supply chain visibility solutions enabling transparent data exchange across logistics networks.',
-      tags: ['Logistics', 'Supply Chain'],
-      status: 'discussions',
-    },
-    {
       name: 'Graia',
       country: 'Hungary',
       flag: '🇭🇺',
