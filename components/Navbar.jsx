@@ -29,6 +29,7 @@ export default function Navbar() {
     { name: 'Company', path: '/company' },
     { name: 'Insights', path: '/insights' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Employee Login', path: 'https://swais.in/employee-timesheet/login' },
   ];
 
   // START FEATURE FLAG CHANGE - Navigation Hidden
