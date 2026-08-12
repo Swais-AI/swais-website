@@ -22,7 +22,7 @@ const OPERATIONS_TABS = [
       {
         title: 'Strategic Collaborations',
         type: 'list',
-        items: ['Comtrade Digital Services – Platform engineering and integration', 'Vinturas – Secure supply chain visibility'],
+        items: ['Comtrade Digital Services – Platform engineering and integration'],
       },
       {
         title: 'Fleet Intelligence',
