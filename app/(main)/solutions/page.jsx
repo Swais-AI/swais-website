@@ -12,7 +12,7 @@ const OPERATIONS_TABS = [
     ),
     sections: [
       { title: 'Executive Summary', type: 'text', content: 'AI-driven transportation and fleet optimization platform enabling real-time tracking, route intelligence, predictive analytics, and cost reduction across first mile, mid mile, and last mile operations.' },
-      { title: 'Strategic Collaborations', type: 'list', items: ['Comtrade Digital Services – Platform engineering and integration', 'Vinturas – Secure supply chain visibility'] },
+      { title: 'Strategic Collaborations', type: 'list', items: ['Comtrade Digital Services – Platform engineering and integration'] },
       { title: 'Fleet Intelligence', type: 'list', items: ['GPS-based real-time vehicle tracking', 'AI-based route optimization and re-routing', 'Predictive ETA and delay alerts', 'Driver behavior analytics and safety scoring', 'Fuel optimization and cost analytics', 'Cold chain monitoring'] },
       { title: 'Control Tower', type: 'list', items: ['Centralized command dashboard', 'Real-time disruption alerts', 'AI-based demand forecasting', 'End-to-end supply chain visibility', 'Exception management with automated alerts'] },
     ],
